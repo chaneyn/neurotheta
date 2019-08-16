@@ -63,7 +63,7 @@ def ptf_van_genuchten(X,nbag):
  #Initialize prediction
  pred = np.zeros((npred,nbag,no))
 
- for ibag in xrange(nbag): # loop through n bootstrap
+ for ibag in range(nbag): # loop through n bootstrap
   W1 = np.reshape(Wr1[ibag,:].T,(ni+1,nh)).T
   W2 = np.reshape(Wr2[ibag,:].T,(nh+1,no)).T
   bp = neuro(W1,W2,X) # evaluate the nnet
